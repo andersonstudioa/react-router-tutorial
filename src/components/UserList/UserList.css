@@ -1,0 +1,13 @@
+.userList {
+    margin-top: 50px;
+    border-top: solid 1px rgb(231, 231, 231);
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.userList .users {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}

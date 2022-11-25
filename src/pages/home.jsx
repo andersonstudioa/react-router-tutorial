@@ -24,6 +24,7 @@ export async function loader({ request }) {
 }
 
 export default function Home() {
+    
     const { contacts, q } = useLoaderData();
     const [query, setQuery] = useState(q);
     const navigation = useNavigation();
@@ -38,7 +39,7 @@ export default function Home() {
     useEffect(() => {
       setQuery(q);
     }, [q]);
-
+    //console.log(contacts);
     return (
       <>
         <div id="sidebar">
@@ -58,7 +59,7 @@ export default function Home() {
                 placeholder="Pesquisar"
                 type="search"
                 name="q"
-                value={query}
+                value={query ? query : ""}
                 onChange={(event) => {
                   const isFirstSearch = q == null;
                   submit(event.currentTarget.form, {
